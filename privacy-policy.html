@@ -299,7 +299,7 @@
       <div class="contact-card">
         <p>
           <strong>PinMuse</strong><br />
-          Email: <a href="mailto:info@wishsite.de">info@wishsite.de</a>
+          Email: <a href="#" class="email-rtl" aria-label="Email PinMuse">moc.esumnip@olleh</a>
         </p>
       </div>
 
@@ -322,11 +322,21 @@
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="/privacy-policy.html">Privacy Policy</a>
         <a href="/imprint.html">Imprint</a>
-        <a href="mailto:info@wishsite.de">info@wishsite.de</a>
+        <a href="#" class="email-rtl" aria-label="Email PinMuse">moc.esumnip@olleh</a>
       </nav>
       <p class="footer-copy">© PinMuse. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('a.email-rtl').forEach(function(a) {
+      var email = a.textContent.trim().split('').reverse().join('');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+      a.style.direction = 'ltr';
+      a.style.unicodeBidi = 'normal';
+    });
+  </script>
 
 </body>
 </html>

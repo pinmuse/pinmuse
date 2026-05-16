@@ -798,3 +798,10 @@ button { cursor: pointer; font-family: inherit; }
 .contact-card a {
   color: var(--clr-accent-dark);
 }
+
+/* Email obfuscation — reversed RTL, JS corrects on load */
+.email-rtl {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  display: inline-block;
+}

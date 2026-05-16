@@ -52,29 +52,18 @@
     <!-- Content -->
     <article class="page-content" aria-label="Imprint content">
 
-      <!-- Warning box -->
-      <div class="warning-box" role="alert">
-        <span class="warning-box-icon" aria-hidden="true">⚠️</span>
-        <p>
-          <strong>Please replace all placeholders before publishing.</strong>
-          All fields marked in pink must be completed with accurate legal information
-          prior to making this page publicly accessible.
-        </p>
-      </div>
-
-
       <h2>Provider Information</h2>
 
       <p>
         <strong>Full Legal Name:</strong><br />
-        <span class="placeholder-text">[Full Legal Name — e.g. Max Mustermann or Company GmbH]</span>
+        PinMuse - Markus Gaeth
       </p>
 
       <p>
         <strong>Address:</strong><br />
-        <span class="placeholder-text">[Street Address and House Number]</span><br />
-        <span class="placeholder-text">[Postal Code]</span> <span class="placeholder-text">[City]</span><br />
-        <span class="placeholder-text">[Country — e.g. Germany]</span>
+        Derkskamp 95<br />
+        48163 Münster<br />
+        Germany
       </p>
 
 
@@ -82,7 +71,7 @@
 
       <p>
         <strong>Email:</strong><br />
-        <a href="mailto:info@wishsite.de">info@wishsite.de</a>
+        <a href="#" class="email-rtl" aria-label="Email PinMuse">moc.esumnip@olleh</a>
       </p>
 
 
@@ -90,26 +79,18 @@
 
       <p>
         Responsible for editorial content pursuant to § 18 Abs. 2 MStV:<br />
-        <span class="placeholder-text">[Full Legal Name]</span><br />
-        <span class="placeholder-text">[Street Address and House Number]</span><br />
-        <span class="placeholder-text">[Postal Code]</span> <span class="placeholder-text">[City]</span>
+        Markus Gaeth<br />
+        Derkskamp 95<br />
+        48163 Münster
       </p>
 
 
       <h2>VAT Identification Number</h2>
 
       <p>
-        VAT ID (if applicable) pursuant to § 27a UStG:<br />
-        <span class="placeholder-text">[VAT ID — or delete this section if not applicable]</span>
+        VAT ID pursuant to § 27a UStG:<br />
+        DE349944310
       </p>
-
-
-      <h2>Trade Register</h2>
-
-      <p>
-        <span class="placeholder-text">[Trade register entry, registration court and number — or delete this section if not applicable]</span>
-      </p>
-
 
       <h2>Online Dispute Resolution</h2>
 
@@ -150,11 +131,21 @@
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="/privacy-policy.html">Privacy Policy</a>
         <a href="/imprint.html">Imprint</a>
-        <a href="mailto:info@wishsite.de">info@wishsite.de</a>
+        <a href="#" class="email-rtl" aria-label="Email PinMuse">moc.esumnip@olleh</a>
       </nav>
       <p class="footer-copy">© PinMuse. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('a.email-rtl').forEach(function(a) {
+      var email = a.textContent.trim().split('').reverse().join('');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+      a.style.direction = 'ltr';
+      a.style.unicodeBidi = 'normal';
+    });
+  </script>
 
 </body>
 </html>
