@@ -21,7 +21,7 @@ PinMuse-Homepage/
 ├── imprint.html            # German Impressum / legal notice
 ├── styles.css              # All styles (single shared stylesheet)
 ├── assets/
-│   └── logo-placeholder.svg   # App logo / icon placeholder
+│   └── pinmuse-logo.svg   # App logo / icon placeholder
 └── README.md
 ```
 
@@ -29,7 +29,7 @@ PinMuse-Homepage/
 
 ## Before Publishing
 
-1. **Replace the logo:** Swap `assets/logo-placeholder.svg` with your production app icon (`assets/logo-placeholder.png` or `.svg`). Update `<img src="...">` references in all HTML files if you rename the file.
+1. **Replace the logo:** Swap `assets/pinmuse-logo.svg` with your final production app icon. Update `<img src="...">` references in all HTML files if you rename the file.
 2. **Complete the Imprint:** Open `imprint.html` and replace all pink `[placeholder]` fields with real legal information.
 3. **Set the Privacy Policy date:** Replace `[Placeholder — insert date before publishing]` in `privacy-policy.html` with the actual effective date.
 4. **Add an OG image:** Place a 1200×630 px image at `assets/og-image.png` for social sharing previews.
